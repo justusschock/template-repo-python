@@ -72,7 +72,7 @@ The unittests are also automatically triggered within [CI/CD](#cicd)
 The [`.codecov.yml`](.codecov.yml) file specifies, how coverage should behave, how to calculate the coverage (i.e. what files to include for line counting) etc. 
 
 ### Requirements
-If you want to add new requirements, simply add them to the [`requirements.txt`](requirements.txt) file.
+If you want to add new requirements, simply add them to the [`requirements.txt`](requirements/install.txt) file.
 
 ### Packaging on PyPi
 If you plan to release your package on pypi, ship wheels for it, you might need the [`MANSIFEST.in`](MANIFEST.in) file, since it specifies (among other things), which files to include to your binaries.
