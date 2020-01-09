@@ -1,6 +1,7 @@
 from setuptools import setup, find_packages
+import versioneer
 import os
-import re
+
 
 def resolve_requirements(file):
     requirements = []
@@ -21,35 +22,26 @@ def read_file(file):
     return content
 
 
-def find_version(file):
-    content = read_file(file)
-    version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", content,
-                              re.M)
-    if version_match:
-        return version_match.group(1)
-
-
-requirements = resolve_requirements(os.path.join(os.path.dirname(__file__),
-                                                 'requirements.txt'))
+requirements = resolve_requirements(
+    os.path.join(os.path.dirname(__file__), "requirements", 'install.txt'))
 
 readme = read_file(os.path.join(os.path.dirname(__file__), "README.md"))
-license = read_file(os.path.join(os.path.dirname(__file__), "LICENSE"))
-_version = find_version(os.path.join(os.path.dirname(__file__), "template-repo",
-                                           "__init__.py"))
 
 
 setup(
-    name='template_package',
-    version=_version,
+    name='REPONAME',
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     packages=find_packages(),
-    url='https://github.com/justusschock/template-repo-python',
+    url='',
     test_suite="unittest",
     long_description=readme,
     long_description_content_type='text/markdown',
     install_requires=requirements,
     tests_require=["coverage"],
-    python_requires=">=3.5",
-    author="Justus Schock",
-    author_email="justus.schock@rwth-aachen.de",
-    license=license,
+    python_requires=">=3.7",
+    author="PhoenixDL",
+    maintainer='Justus Schock',
+    maintainer_email='justus.schock@rwth-aachen.de',
+    license='MIT',
 )
