@@ -121,13 +121,7 @@ if __name__ == '__main__':
         '--remove_script', action='store_true',
         help='Whether or not to remove this script after success')
 
-    parser.add_argument('?', '-h', '--help', action='store_true',
-                        help='enables the printing of the helper docs')
-
     parser_args = parser.parse_args()
-
-    if parser_args.help:
-        parser.print_help()
 
     returns, successes = {}, {}
     functions = OrderedDict()
