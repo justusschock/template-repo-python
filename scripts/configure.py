@@ -116,10 +116,9 @@ if __name__ == '__main__':
     parser.add_argument('--enable_coverage_upload', action='store_true',
                         help='Whether to enable or disable the coverage '
                              'reports for this repository')
-
-    parser.add_argument(
-        '--remove_script', action='store_true',
-        help='Whether or not to remove this script after success')
+    
+    parser.add_argument('exclude_notebooks', action='store_true')
+    parser.add_argument('disable_automatic_pypi_relases', action='store_true')
 
     parser_args = parser.parse_args()
 
@@ -149,6 +148,10 @@ if __name__ == '__main__':
 
         returns[name] = ret_val
         successes[name] = success
-
-    if parser_args.remove_script:
-        remove_script(returns['repo_name'])
+        
+    if parser_args.exclude_notebooks:
+        os.remove(os.path.join(os.path.split(os.path.split(__file__)[0])[0], '.github', 'workflows', 'notebook_tests.yml'))
+        os.remove(os.path.join(os.path.split(os.path.split(__file__)[0])[0], 'requirements', 'notebooks.txt'))
+        
+    if parser_args.disable_automatic_pypi_releases:
+        os.remove(os.path.join(os.path.split(os.path.split(__file__)[0])[0], '.github', 'workflows', 'pypi_release.yml'))
