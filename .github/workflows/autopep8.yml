@@ -15,8 +15,8 @@ jobs:
     - name: Commit and push changes
       uses: stefanzweifel/git-auto-commit-action@v2.0.0
       with:
-        commit_author_email: justus.schock@rwth-aachen.de
-        commit_author_name: Justus Schock
+        commit_author_email: florian.mueller.fouarge@gmail.com
+        commit_author_name: Florian Müller-Fouarge
         commit_message: autopep8 fix
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

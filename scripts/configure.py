@@ -62,8 +62,12 @@ def remove_lines_with_starting_string(file: str, start_str: str):
 
 
 def set_package_name(name: str):
-    files = ['setup.cfg', 'setup.py',
-             os.path.join('.github', 'workflows', 'unittests.yml')]
+    files = ['setup.cfg',
+             'setup.py',
+             '.gitattributes',
+             'MANIFEST.in',
+             os.path.join('.github', 'workflows', 'unittests.yml')
+             ]
 
     base_path = get_root_path()
 
@@ -75,7 +79,11 @@ def set_package_name(name: str):
 
 
 def set_author_name(name: str):
-    files = ['setup.py', 'LICENSE']
+    files = ['setup.py',
+              '.readthedocs.yml',
+             'LICENSE',
+             '.mergify.yml'
+             ]
 
     base_path = get_root_path()
 
