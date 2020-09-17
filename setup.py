@@ -40,8 +40,9 @@ setup(
     install_requires=requirements,
     tests_require=["coverage"],
     python_requires=">=3.7",
-    author="PhoenixDL",
-    maintainer='Justus Schock',
-    maintainer_email='justus.schock@rwth-aachen.de',
+    author="AUTHOR_NAME",
+    author_email="AUTHOR_EMAIL",
+    maintainer='MAINTAINER_NAME',
+    maintainer_email='MAINTAINER_NAME',
     license='MIT',
 )
