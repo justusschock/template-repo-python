@@ -1,5 +1,7 @@
 name: Format python code
+
 on: push
+
 jobs:
   autopep8:
     runs-on: ubuntu-latest
@@ -9,6 +11,7 @@ jobs:
       uses: peter-evans/autopep8@v1.0.0
       with:
         args: --recursive --in-place --aggressive --aggressive .
+
     - name: Commit and push changes
       uses: stefanzweifel/git-auto-commit-action@v2.0.0
       with:
