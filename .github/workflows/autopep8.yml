@@ -16,8 +16,8 @@ jobs:
     - name: Commit and push changes
       uses: stefanzweifel/git-auto-commit-action@v2.0.0
       with:
-        commit_user_email: florian.mueller.fouarge@gmail.com
-        commit_user_name: Florian Müller-Fouarge
+        commit_author_email: florian.mueller.fouarge@gmail.com
+        commit_author_name: Florian Müller-Fouarge
         # Required
         commit_message: autopep8 fix
       env:
