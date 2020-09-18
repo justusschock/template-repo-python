@@ -17,18 +17,18 @@ def get_test_suite():
 
 
 def load_requirements(
-    path_dir=PATH_ROOT,
-    file_name='install.txt',
-     comment_char='#'):
+        path_dir=PATH_ROOT,
+        file_name='install.txt',
+        comment_char='#'):
     with open(os.path.join(path_dir, 'requirements', file_name), 'r') as file:
         lines = [ln.strip() for ln in file.readlines()]
     reqs = []
     for ln in lines:
         if ln.startswith("-r"):
             requirements += load_requirements(
-    filename=os.path.join(
-        os.path.dirname(file),
-         ln.split(" ")[1]))
+                filename=os.path.join(
+                    os.path.dirname(file),
+                    ln.split(" ")[1]))
         # filer all comments
         if comment_char in ln:
             ln = ln[:ln.index(comment_char)].strip()
@@ -51,10 +51,10 @@ def read_file(file):
 # From remote, use like `pip install pytorch-lightning[dev, docs]`
 # From local copy of repo, use like `pip install ".[dev, docs]"`
 extras = {
-#     # 'docs': load_requirements(file_name='docs.txt'),
-#     'examples': load_requirements(file_name='examples.txt'),
-#     'extra': load_requirements(file_name='extra.txt'),
-#     'test': load_requirements(file_name='test.txt')
+    #     # 'docs': load_requirements(file_name='docs.txt'),
+    #     'examples': load_requirements(file_name='examples.txt'),
+    #     'extra': load_requirements(file_name='extra.txt'),
+    #     'test': load_requirements(file_name='test.txt')
 }
 # extras['dev'] = extras['extra'] + extras['test']
 # extras['all'] = extras['dev'] + extras['examples']  # + extras['docs']
@@ -98,7 +98,7 @@ setup(
         'dicom',
         'medical',
         'pseudonymization'
-        ],  # Optional
+    ],  # Optional
 
     # You can just specify package directories manually here if your project is
     # simple. Or you can use find_packages().
@@ -138,7 +138,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
-        ],
+    ],
 
     entry_points={
         'console_scripts': [
