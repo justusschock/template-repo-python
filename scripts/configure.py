@@ -80,7 +80,7 @@ def set_package_name(name: str):
 
 def set_author_name(name: str):
     files = ['setup.py',
-              '.readthedocs.yml',
+             '.readthedocs.yml',
              'LICENSE',
              '.mergify.yml'
              ]
@@ -88,7 +88,12 @@ def set_author_name(name: str):
     base_path = get_root_path()
 
     for file in files:
-        replace_file_content(os.path.join(base_path, file), 'AUTHOR_NAME', name)
+        replace_file_content(
+            os.path.join(
+                base_path,
+                file),
+            'AUTHOR_NAME',
+            name)
 
     shutil.move(os.path.join(base_path, 'AUTHOR_NAME'),
                 os.path.join(base_path, name))
@@ -100,7 +105,12 @@ def set_author_email(name: str):
     base_path = get_root_path()
 
     for file in files:
-        replace_file_content(os.path.join(base_path, file), 'AUTHOR_EMAIL', name)
+        replace_file_content(
+            os.path.join(
+                base_path,
+                file),
+            'AUTHOR_EMAIL',
+            name)
 
     shutil.move(os.path.join(base_path, 'AUTHOR_EMAIL'),
                 os.path.join(base_path, name))
@@ -112,7 +122,12 @@ def set_maintainer_name(name: str):
     base_path = get_root_path()
 
     for file in files:
-        replace_file_content(os.path.join(base_path, file), 'MAINTAINER_NAME', name)
+        replace_file_content(
+            os.path.join(
+                base_path,
+                file),
+            'MAINTAINER_NAME',
+            name)
 
     shutil.move(os.path.join(base_path, 'MAINTAINER_NAME'),
                 os.path.join(base_path, name))
@@ -124,7 +139,12 @@ def set_maintainer_email(name: str):
     base_path = get_root_path()
 
     for file in files:
-        replace_file_content(os.path.join(base_path, file), 'MAINTAINER_EMAIL', name)
+        replace_file_content(
+            os.path.join(
+                base_path,
+                file),
+            'MAINTAINER_EMAIL',
+            name)
 
     shutil.move(os.path.join(base_path, 'MAINTAINER_EMAIL'),
                 os.path.join(base_path, name))
@@ -170,19 +190,23 @@ if __name__ == '__main__':
         default=None)
 
     parser.add_argument(
-        '--author_name', type=str,
+        '--author_name',
+        type=str,
         help='The name of the author of the python package included in this directory',
         default=None)
     parser.add_argument(
-        '--author_email', type=str,
+        '--author_email',
+        type=str,
         help='The email address of the author of the python package included in this directory',
         default=None)
     parser.add_argument(
-        '--maintainer_name', type=str,
+        '--maintainer_name',
+        type=str,
         help='The name of the maintainer of the python package included in this directory',
         default=None)
     parser.add_argument(
-        '--maintainer_email', type=str,
+        '--maintainer_email',
+        type=str,
         help='The email address of the maintainer of the python package included in this directory',
         default=None)
 
@@ -210,7 +234,7 @@ if __name__ == '__main__':
         author_name_fn = successfull
     else:
         author_name_fn = partial(set_author_name,
-                                  name=parser_args.author_name)
+                                 name=parser_args.author_name)
 
     if parser_args.author_email is None:
         author_email_fn = successfull
@@ -222,13 +246,13 @@ if __name__ == '__main__':
         maintainer_name_fn = successfull
     else:
         maintainer_name_fn = partial(set_maintainer_name,
-                                  name=parser_args.maintainer_name)
+                                     name=parser_args.maintainer_name)
 
     if parser_args.maintainer_email is None:
         maintainer_email_fn = successfull
     else:
         maintainer_email_fn = partial(set_maintainer_email,
-                                  name=parser_args.maintainer_email)
+                                      name=parser_args.maintainer_email)
 
     functions['coverage_upload'] = partial(
         configure_coverage_upload,

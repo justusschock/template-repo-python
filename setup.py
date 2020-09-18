@@ -5,6 +5,7 @@ import unittest
 
 PATH_ROOT = os.path.dirname(__file__)
 
+
 def get_test_suite():
     """
     Prepare a test-suite callable with:
@@ -14,14 +15,20 @@ def get_test_suite():
     test_suite = test_loader.discover('tests', pattern='test_*.py')
     return test_suite
 
-def load_requirements(path_dir=PATH_ROOT, file_name='install.txt', comment_char='#'):
+
+def load_requirements(
+    path_dir=PATH_ROOT,
+    file_name='install.txt',
+     comment_char='#'):
     with open(os.path.join(path_dir, 'requirements', file_name), 'r') as file:
         lines = [ln.strip() for ln in file.readlines()]
     reqs = []
     for ln in lines:
         if ln.startswith("-r"):
-            requirements += load_requirements(filename=
-                        os.path.join(os.path.dirname(file), ln.split(" ")[1]))
+            requirements += load_requirements(
+    filename=os.path.join(
+        os.path.dirname(file),
+         ln.split(" ")[1]))
         # filer all comments
         if comment_char in ln:
             ln = ln[:ln.index(comment_char)].strip()
@@ -31,6 +38,7 @@ def load_requirements(path_dir=PATH_ROOT, file_name='install.txt', comment_char=
         if ln:  # if requirement is not empty
             reqs.append(ln)
     return reqs
+
 
 def read_file(file):
     with open(file) as f:
@@ -67,27 +75,28 @@ setup(
     name='REPONAME',  # Required
     version=versioneer.get_version(),  # Required
     cmdclass=versioneer.get_cmdclass(),  # Optional
-    author='AUTHOR_NAME', # Optional
-    author_email='AUTHOR_EMAIL', # Optional
-    maintainer='MAINTAINER_NAME', # Optional
-    maintainer_email='MAINTAINER_NAME', # Optional
+    author='AUTHOR_NAME',  # Optional
+    author_email='AUTHOR_EMAIL',  # Optional
+    maintainer='MAINTAINER_NAME',  # Optional
+    maintainer_email='MAINTAINER_NAME',  # Optional
 
     url='URL',  # Optional
-    download_url='DOWNLOAD_URL', # Optional
+    download_url='DOWNLOAD_URL',  # Optional
     license='BSD',
-    packages=find_packages(exclude=['tests','tests/*',]),  # Required
+    packages=find_packages(exclude=['tests', 'tests/*', ]),  # Required
 
-    description='Program to pseudonymize DICOM files according to default and custom rules.', # Optional
+    description='Program to pseudonymize DICOM files according to default and custom rules.',  # Optional
     long_description=readme,  # Optional
     long_description_content_type='text/markdown',  # Optional
 
     # This field adds keywords for your project which will appear on the
     # project page. What does your project relate to?
-    # A list of strings or a comma-separated string providing descriptive meta-data.
+    # A list of strings or a comma-separated string providing descriptive
+    # meta-data.
     keywords=[
         'anonymization',
         'dicom',
-        'medical' ,
+        'medical',
         'pseudonymization'
         ],  # Optional
 
