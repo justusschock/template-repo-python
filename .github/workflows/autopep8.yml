@@ -1,6 +1,6 @@
 name: Format python code
 
-on: push
+on: [push]
 
 jobs:
   autopep8:

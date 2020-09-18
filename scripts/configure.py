@@ -7,9 +7,16 @@ def get_root_path():
 
 
 def set_repo_name(name: str):
-    path = get_root_path()
-    new_path = os.path.join(os.path.dirname(path), name)
-    shutil.move(path, new_path)
+    base_path = get_root_path()
+    new_path = os.path.join(os.path.dirname(base_path), name)
+    shutil.move(base_path, new_path)
+
+
+    files = ['setup.cfg'
+             ]
+
+    for file in files:
+        replace_file_content(os.path.join(base_path, file), 'REPONAME', name)
 
     return new_path
 
