@@ -11,7 +11,6 @@ def set_repo_name(name: str):
     new_path = os.path.join(os.path.dirname(base_path), name)
     shutil.move(base_path, new_path)
 
-
     files = ['setup.cfg'
              ]
 
