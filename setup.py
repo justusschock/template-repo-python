@@ -143,5 +143,5 @@ setup(
     entry_points={
         'console_scripts': [
             'script_name = folder.script:main'
-        ]
+        ]}
 )
