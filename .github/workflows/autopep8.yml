@@ -1,15 +1,12 @@
 name: Format python code
 
-on:
-  push:
-    branches:
-      - master
+on: push
 
 jobs:
   autopep8:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout
+    - uses: actions/checkout@master
 
     - name: autopep8
       uses: peter-evans/autopep8@v1.0.0
