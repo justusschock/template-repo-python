@@ -72,7 +72,7 @@ readme = read_file(os.path.join(PATH_ROOT, "README.md"))
 # To record the files created use:
 #   python setup.py install --record files.txt
 setup(
-    name='REPONAME',  # Required
+    name='PACKAGE_NAME',  # Required
     version=versioneer.get_version(),  # Required
     cmdclass=versioneer.get_cmdclass(),  # Optional
     author='AUTHOR_NAME',  # Optional
@@ -80,7 +80,7 @@ setup(
     maintainer='MAINTAINER_NAME',  # Optional
     maintainer_email='MAINTAINER_NAME',  # Optional
 
-    url='https://github.com/GITHUB_NAME/REPONAME',  # Optional
+    url='https://github.com/GITHUB_NAME/REPO_NAME',  # Optional
     download_url='DOWNLOAD_URL',  # Optional
     license='LICENSE',
     packages=find_packages(exclude=['tests', 'tests/*', ]),  # Required

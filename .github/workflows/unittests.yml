@@ -16,7 +16,7 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
-        
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -35,4 +35,4 @@ jobs:
 #COVERAGE_UPLOAD_CONFIG        token: ${{secrets.CODECOV_TOKEN}} #required
 #COVERAGE_UPLOAD_CONFIG        file: ./coverage.xml #optional
 #COVERAGE_UPLOAD_CONFIG        flags: unittests #optional
-#COVERAGE_UPLOAD_CONFIG        name: codecov-REPONAME #optional
+#COVERAGE_UPLOAD_CONFIG        name: codecov-REPO_NAME #optional

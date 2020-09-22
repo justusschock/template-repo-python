@@ -1,6 +1,6 @@
 # Contributing
 
-Welcome to the REPONAME community! We're building the most advanced research platform on the planet to implement the latest, best practices that the amazing PyTorch team rolls out!
+Welcome to the REPO_NAME community! We're building the most advanced research platform on the planet to implement the latest, best practices that the amazing PyTorch team rolls out!
 
 ## Main Core Value: One less thing to remember
 
@@ -86,13 +86,13 @@ _**Note**, even if you do not find the solution, sending a PR with a test coveri
 
 1. Add/update the relevant tests!
 
-- [This PR](https://github.com/AUTHORNAME/PACKAGE_NAME/pull/2671) is a good example for adding a new metric, and [this one for a new logger](https://github.com/GITHUB_NAME/REPONAME/pull/2721)
+- [This PR](https://github.com/AUTHOR_NAME/PACKAGE_NAME/pull/2671) is a good example for adding a new metric, and [this one for a new logger](https://github.com/GITHUB_NAME/REPO_NAME/pull/2721)
 
 ### Test cases:
 
 Want to keep PACKAGE_NAME healthy? Love seeing those green tests? So do we! How to we keep it that way? We write tests! We value tests contribution even more than new features.
 
-Most of the tests in REPONAME train a trial MNIST model under various trainer conditions (ddp, ddp2+amp, etc...). The tests expect the model to perform to a reasonable degree of testing accuracy to pass. Want to add a new test case and not sure how? [Talk to us!](https://join.slack.com/t/PACKAGE_NAME/shared_invite/zt-f6bl2l0l-JYMK3tbAgAmGRrlNr00f1A)
+Most of the tests in REPO_NAME train a trial MNIST model under various trainer conditions (ddp, ddp2+amp, etc...). The tests expect the model to perform to a reasonable degree of testing accuracy to pass. Want to add a new test case and not sure how? [Talk to us!](https://join.slack.com/t/PACKAGE_NAME/shared_invite/zt-f6bl2l0l-JYMK3tbAgAmGRrlNr00f1A)
 
 ---
 
@@ -102,7 +102,7 @@ Most of the tests in REPONAME train a trial MNIST model under various trainer co
 
 All added or edited code shall be the own original work of the particular contributor.
 If you use some third-party implementation, all such blocks/functions/modules shall be properly referred and if possible also agreed by code's author. For example - `This code is inspired from http://...`.
-In case you adding new dependencies, make sure that they are compatible with the actual REPONAME license (ie. dependencies should be _at least_ as permissive as the REPONAME license).
+In case you adding new dependencies, make sure that they are compatible with the actual REPO_NAME license (ie. dependencies should be _at least_ as permissive as the REPO_NAME license).
 
 ### Coding Style
 
@@ -187,7 +187,7 @@ Note: if your computer does not have multi-GPU nor TPU these tests are skipped.
 **GitHub Actions:** For convenience, you can also use your own GHActions building which will be triggered with each commit.
 This is useful if you do not test against all required dependency versions.
 
-**Docker:** Another option is utilize the [REPONAME cuda base docker image](https://hub.docker.com/repository/docker/AUTHOR_NAME/REPONAME/tags?page=1&name=cuda). You can then run:
+**Docker:** Another option is utilize the [REPO_NAME cuda base docker image](https://hub.docker.com/repository/docker/AUTHOR_NAME/REPO_NAME/tags?page=1&name=cuda). You can then run:
 
 ```bash
 python -m pytest PACKAGE_NAME tests examples -v --flake8
@@ -219,7 +219,7 @@ We welcome any useful contribution! For your convenience here's a recommended wo
 
 1. **How can I help/contribute?**
 
-   All help is extremely welcome - reporting bugs, fixing documentation, adding test cases, solving issues and preparing bug fixes. To solve some issues you can start with label [good first issue](https://github.com/GITHUB_NAME/REPONAME/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) or chose something close to your domain with label [help wanted](https://github.com/GITHUB_NAME/REPONAME/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22). Before you start to implement anything check that the issue description that it is clear and self-assign the task to you (if it is not possible, just comment that you take it and we assign it to you...).
+   All help is extremely welcome - reporting bugs, fixing documentation, adding test cases, solving issues and preparing bug fixes. To solve some issues you can start with label [good first issue](https://github.com/GITHUB_NAME/REPO_NAME/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) or chose something close to your domain with label [help wanted](https://github.com/GITHUB_NAME/REPO_NAME/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22). Before you start to implement anything check that the issue description that it is clear and self-assign the task to you (if it is not possible, just comment that you take it and we assign it to you...).
 
 2. **Is there a recommendation for branch names?**
 
@@ -232,7 +232,7 @@ We welcome any useful contribution! For your convenience here's a recommended wo
    First, make sure you have set [upstream](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork) by running:
 
    ```bash
-   git remote add upstream https://github.com/GITHUB_NAME/REPONAME.git
+   git remote add upstream https://github.com/GITHUB_NAME/REPO_NAME.git
    ```
 
    You'll know its set up right if you run `git remote -v` and see something similar to this:
@@ -240,8 +240,8 @@ We welcome any useful contribution! For your convenience here's a recommended wo
    ```bash
    origin  https://github.com/{YOUR_USERNAME}/PACKAGE_NAME.git (fetch)
    origin  https://github.com/{YOUR_USERNAME}/PACKAGE_NAME.git (push)
-   upstream        https://github.com/GITHUB_NAME/REPONAME.git (fetch)
-   upstream        https://github.com/GITHUB_NAME/REPONAME.git (push)
+   upstream        https://github.com/GITHUB_NAME/REPO_NAME.git (fetch)
+   upstream        https://github.com/GITHUB_NAME/REPO_NAME.git (push)
    ```
 
    Now you can update your master with upstream's master by running:
@@ -278,9 +278,9 @@ NOTE: Once you edit one of these files, remember to `source` it or restart your 
 
 ```bash
 plclone (){
-   git clone https://github.com/{YOUR_USERNAME}/REPONAME.git
-   cd REPONAME
-   git remote add upstream https://github.com/GITHUB_NAME/REPONAME.git
+   git clone https://github.com/{YOUR_USERNAME}/REPO_NAME.git
+   cd REPO_NAME
+   git remote add upstream https://github.com/GITHUB_NAME/REPO_NAME.git
    # This is just here to print out info about your remote upstream/origin
    git remote -v
 }
