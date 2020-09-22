@@ -1,19 +1,19 @@
-name: Unittests
+name: Unittests Windows
 
 on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.7]
+        python-version: [3.6, 3.7, 3.8]
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -29,10 +29,11 @@ jobs:
       run: |
         coverage run -m unittest
         coverage xml # convert .coverage file to coverage.xml file
-#COVERAGE_UPLOAD_CONFIG    - name: Upload coverage to Codecov
-#COVERAGE_UPLOAD_CONFIG      uses: codecov/codecov-action@v1.0.2
-#COVERAGE_UPLOAD_CONFIG      with:
-#COVERAGE_UPLOAD_CONFIG        token: ${{secrets.CODECOV_TOKEN}} #required
-#COVERAGE_UPLOAD_CONFIG        file: ./coverage.xml #optional
-#COVERAGE_UPLOAD_CONFIG        flags: unittests #optional
-#COVERAGE_UPLOAD_CONFIG        name: codecov-REPO_NAME #optional
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1.0.2
+      with:
+        token: ${{secrets.CODECOV_TOKEN}} #required
+        file: ./coverage.xml #optional
+        flags: unittests #optional
+        name: codecov-REPO_NAME #optional

@@ -46,7 +46,15 @@
 
 [![Version tag](https://img.shields.io/github/v/tag/AUTHOR_NAME/PACKAGE_NAME)](https://github.com/FlorianMF/template-repo-python/releases)
 
-For more badges check <https://github.com/badges/shields>
+
+| Python Version                                                 | Platform                                             | Unittests                                                                                         | NotebookTests                                                                            |
+|----------------------------------------------------------------|------------------------------------------------------|---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| ![Python](https://img.shields.io/badge/python-3.6/3.7/3.8-orange) | ![System](https://img.shields.io/badge/Linux-blue)   | ![Unittests Linux](https://github.com/FlorianMF/PACKAGE_NAME/workflows/Unittests%20Linux/badge.svg)     | ![NotebookTests Linux](https://github.com/FlorianMF/template-repo-python/workflows/NotebookTests%20Linux/badge.svg) |
+| ![Python](https://img.shields.io/badge/python-3.6/3.7/3.8-orange) | ![System](https://img.shields.io/badge/Windows-blue) | ![Unittests Windows](https://github.com/FlorianMF/template-repo-python/workflows/Unittests%20Windows/badge.svg) | ![NotebookTests Windows](https://github.com/FlorianMF/template-repo-python/workflows/NotebookTests%20Windows/badge.svg) |
+| ![Python](https://img.shields.io/badge/python-3.6/3.7/3.8-orange) | ![System](https://img.shields.io/badge/MacOS-blue)   | ![Unittests macOS](https://github.com/FlorianMF/template-repo-python/workflows/Unittests%20MacOS/badge.svg)    | ![NotebookTests MacOS](https://github.com/FlorianMF/template-repo-python/workflows/NotebookTests%20MacOS/badge.svg) |
+
+
+**For more badges check <https://github.com/badges/shields>**
 
 </div>
 

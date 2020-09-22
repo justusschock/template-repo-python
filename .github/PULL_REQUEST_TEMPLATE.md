@@ -1,12 +1,8 @@
-# PULL_REQUEST_TEMPLATE
-
 ## What does this PR do?
 
-<!--
 Please include a summary of the change and which issue is fixed.
- Please also include relevant motivation and context.
- List any dependencies that are required for this change.
--->
+Please also include relevant motivation and context.
+List any dependencies that are required for this change.
 
 Fixes # (issue)
 
@@ -19,10 +15,9 @@ Fixes # (issue)
 - [ ] Did you verify new and existing tests pass locally with your changes?
 - [ ] If you made a notable change (that affects users), did you update the [CHANGELOG](https://github.com/GITHUB_NAME/REPO_NAME/blob/master/CHANGELOG.md)?
 
-<!-- For CHANGELOG separate each item in unreleased section by a blank line to reduce collisions -->
+For CHANGELOG separate each item in unreleased section by a blank line to reduce collisions
 
 ## PR review
 
 Anyone in this project is free to review the PR once the tests have passed.
 If we didn't discuss your PR in Github issues there's a high chance it will not be merged.
-

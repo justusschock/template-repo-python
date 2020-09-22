@@ -1,4 +1,4 @@
-# How to become a core contributor
+# How To Become A Core Contributor
 
 Thanks for your interest in joining the PACKAGE_NAME team! We’re a rapidly growing project which is poised to become the go-to framework for DL researchers!
 We're currently recruiting for a team of 5 core maintainers.

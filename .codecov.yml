@@ -38,6 +38,7 @@ coverage:
 ignore:
   - "tests/"
   - "*/__init.py"
+  - "REPO_NAME/_version.py"
 
 parsers:
   gcov:
