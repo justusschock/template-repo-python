@@ -48,7 +48,7 @@ def read_file(file):
 
 # https://setuptools.readthedocs.io/en/latest/setuptools.html#declaring-extras
 # Define package extras. These are only installed if you specify them.
-# From remote, use like `pip install pytorch-lightning[dev, docs]`
+# From remote, use like `pip install PACKAGE_NAME[dev, docs]`
 # From local copy of repo, use like `pip install ".[dev, docs]"`
 extras = {
     #     # 'docs': load_requirements(file_name='docs.txt'),
