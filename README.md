@@ -1,17 +1,166 @@
-# Python Template Repository
+## <span style="color:red">*What to maintain*</span>
 
-This repository contains a fully-functionable package structure including (empty) tests.
+<div align="center">
+
+![Logo](docs/source/_images/logos/PACKAGE_NAME_logo.svg)
+
+# REPONAME
+
+**This repository contains a fully-functionable package structure including (empty) tests..**
+
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="https://PACKAGE_NAME.readthedocs.io/en/stable/">Docs</a> •
+  <a href="#examples">Examples</a> •
+  <!-- <a href="#community">Community</a> • -->
+  <a href="#licence">Licence</a>
+</p>
+
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/PACKAGE_NAME)](https://pypi.org/project/PACKAGE_NAME)
+[![PyPI Package Version](https://badge.fury.io/py/PACKAGE_NAME.svg)](https://badge.fury.io/py/PACKAGE_NAME)
+[![image](https://img.shields.io/pypi/v/PACKAGE_NAME)](https://pypi.org/project/PACKAGE_NAME)
+[![PyPI Status](https://pepy.tech/badge/PACKAGE_NAME)](https://pepy.tech/project/PACKAGE_NAME)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/PACKAGE_NAME)](https://pypi.org/project/PACKAGE_NAME)
+
+[![DockerHub](https://img.shields.io/docker/pulls/AUTHOR_NAME/PACKAGE_NAME.svg)](https://hub.docker.com/r/AUTHOR_NAME/PACKAGE_NAME)
+
+[![codecov](https://codecov.io/gh/AUTHOR_NAME/REPONAME/branch/master/graph/badge.svg)](https://codecov.io/gh/AUTHOR_NAME/PACKAGE_NAME)
+[![image](https://img.shields.io/codecov/c/github/AUTHOR_NAME/REPONAME)](https://codecov.io/gh/AUTHOR_NAME/REPONAME)
+
+[![image](https://img.shields.io/github/workflow/status/AUTHOR_NAME/REPONAME/python-3.6?label=python%203.6)](https://github.com/GITHUB_NAME/REPONAME/actions)
+[![image](https://img.shields.io/github/workflow/status/AUTHOR_NAME/REPONAME/python-3.7?label=python%203.7)](https://github.com/GITHUB_NAME/REPONAME/actions)
+[![image](https://img.shields.io/pypi/status/REPONAME)](https://pypi.org/project/REPONAME)
+
+[![ReadTheDocs](https://readthedocs.org/projects/PACKAGE_NAME/badge/?version=stable)](https://PACKAGE_NAME.readthedocs.io/en/stable/)
+[![Slack](https://img.shields.io/badge/slack-chat-green.svg?logo=slack)](https://join.slack.com/t/PACKAGE_NAME/shared_invite/zt-f6bl2l0l-JYMK3tbAgAmGRrlNr00f1A)
+[![Discourse status](https://img.shields.io/discourse/status?server=https%3A%2F%2Fforums.AUTHOR_NAME.ai)](https://forums.AUTHOR_NAME.ai/)
+[![license](https://img.shields.io/badge/License-LICENSE-blue.svg)](https://github.com/GITHUB_NAME/REPONAME/blob/master/LICENSE)
+[![Next Release](https://img.shields.io/badge/Next%20Release-Jan-Dec%20xx-<COLOR>.svg)](https://shields.io/)
+
+
+[![image](https://img.shields.io/pypi/implementation/PACKAGE_NAME)](https://pypi.org/project/PACKAGE_NAME)
+
+[![image](https://img.shields.io/snyk/vulnerabilities/github/AUTHOR_NAME/PACKAGE_NAME)](https://github.com/GITHUB_NAME/REPONAME/network/alerts)
+
+[![image](https://img.shields.io/github/v/tag/AUTHOR_NAME/PACKAGE_NAME)](https://github.com/GITHUB_NAME/REPONAME/releases)
+
+</div>
+
+---
+
+## How To Use
+
+### Step 0: Install locally
+
+```bash
+# clone project
+git clone https://github.com/GITHUB_NAME/REPONAME.git
+
+# install project
+cd PACKAGE_NAME
+pip install .
+pip install -r requirements.txt
+```
+
+### Step 0: Install from remote
+
+Simple installation from PyPI
+
+```bash
+pip install PACKAGE_NAME
+```
+
+From Conda
+
+```bash
+conda install PACKAGE_NAME -c conda-forge
+```
+
+### Step 1: ...
+
+Describe step 1
+
+```python
+Python examples
+```
+
+### Step 2: ...
+
+Describe step 1
+
+```python
+Python examples
+```
+
+---
+
+## Examples
+
+###### Hello world
+
+[hello world example](url)
+
+###### Example category 2
+
+[example 1](url)
+
+[example 2](url)
+
+---
+
+## Asking for help
+
+If you have any questions please:
+
+1. [Read the docs](https://PACKAGE_NAME.rtfd.io/en/latest/).
+1. [Look it up in our forum (or add a new question)](https://forums.PACKAGE_NAME.ai/)
+1. [Search through the issues](https://github.com/GITHUB_NAME/REPONAME/issues?utf8=%E2%9C%93&q=my++question).
+1. [Join our slack](https://join.slack.com/t/PACKAGE_NAME/shared_invite/zt-f6bl2l0l-JYMK3tbAgAmGRrlNr00f1A).
+1. [Ask on stackoverflow](https://stackoverflow.com/questions/ask?guided=false) with the tag PACKAGE_NAME.
+
+---
+
+## Licence
+
+Please observe the LICENSE license that is listed in this repository.
+
+## BibTeX
+
+If you want to cite the framework feel free to use this:
+
+```bibtex
+@article{ARTICLE_NAME,
+ title={TITLE},
+ author={AUTHOR_NAME},
+ journal={GitHub. Note: https://github.com/GITHUB_NAME/REPONAME},
+ volume={VOLUME},
+ year={YEAR}
+}
+```
+
+<hr style="border:2px solid green"> </hr>
+
+
+## <span style="color:red">*Info about this template*</span>
+
+## Template Content
 
 It's features include (but are not limited to):
 
 * An already working package structure
 * A working requirement handling
-* Minimal effort pypi releases
-* Pre-Configured CI/CD (With Travis)
+* Minimal effort PyPI releases
+* Pre-Configured CI/CD (With Github Actions or CircleCI)
 * Code coverage analysis
 * Python Code Style Checks
 
 > If you want to add something to this repo, please submit a PR. Contributions are very welcome.
+
+<hr style="border:2px solid green"> </hr>
+
+## <span style="color:red">*What to change*</span>
+
 
 ## Customize it!
 
