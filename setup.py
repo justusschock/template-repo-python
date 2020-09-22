@@ -80,12 +80,12 @@ setup(
     maintainer='MAINTAINER_NAME',  # Optional
     maintainer_email='MAINTAINER_NAME',  # Optional
 
-    url='URL',  # Optional
+    url='https://github.com/GITHUB_NAME/REPONAME',  # Optional
     download_url='DOWNLOAD_URL',  # Optional
-    license='BSD',
+    license='LICENSE',
     packages=find_packages(exclude=['tests', 'tests/*', ]),  # Required
 
-    description='Program to pseudonymize DICOM files according to default and custom rules.',  # Optional
+    description='Program/Package to ...',  # Optional
     long_description=readme,  # Optional
     long_description_content_type='text/markdown',  # Optional
 
@@ -94,10 +94,10 @@ setup(
     # A list of strings or a comma-separated string providing descriptive
     # meta-data.
     keywords=[
-        'anonymization',
-        'dicom',
-        'medical',
-        'pseudonymization'
+        'keyword1',
+        'keyword2',
+        'keyword3',
+        'keywordn'
     ],  # Optional
 
     # You can just specify package directories manually here if your project is
