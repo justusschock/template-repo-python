@@ -104,6 +104,7 @@ def set_github_name(name: str):
     shutil.move(os.path.join(base_path, 'GITHUB_NAME'),
                 os.path.join(base_path, name))
 
+
 def set_author_name(name: str):
     files = ['setup.py',
              '.readthedocs.yml',
@@ -200,6 +201,7 @@ def exec_fn_with_exception_guard(fn, *args, **kwargs):
 def successfull(*args, **kwargs):
     return True
 
+
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--repo_name', type=str,
@@ -241,6 +243,7 @@ def parse_args():
                              'reports for this repository')
 
     return parser.parse_args()
+
 
 def main():
     parser_args = parse_args()
