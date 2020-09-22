@@ -39,3 +39,4 @@ jobs:
         days-before-stale: 30
         # Number of days of inactivity before a stale issue/pull request is closed
         days-before-close: 5
+
