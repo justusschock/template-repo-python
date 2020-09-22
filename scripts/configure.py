@@ -84,6 +84,26 @@ def set_package_name(name: str):
                 os.path.join(base_path, name))
 
 
+def set_github_name(name: str):
+    files = ['setup.py',
+             '.readthedocs.yml',
+             'LICENSE',
+             '.mergify.yml'
+             ]
+
+    base_path = get_root_path()
+
+    for file in files:
+        replace_file_content(
+            os.path.join(
+                base_path,
+                file),
+            'GITHUB_NAME',
+            name)
+
+    shutil.move(os.path.join(base_path, 'GITHUB_NAME'),
+                os.path.join(base_path, name))
+
 def set_author_name(name: str):
     files = ['setup.py',
              '.readthedocs.yml',
@@ -180,12 +200,7 @@ def exec_fn_with_exception_guard(fn, *args, **kwargs):
 def successfull(*args, **kwargs):
     return True
 
-
-if __name__ == '__main__':
-    from functools import partial
-    import argparse
-    from collections import OrderedDict
-
+def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--repo_name', type=str,
                         help='The new folder name for the repository',
@@ -195,6 +210,11 @@ if __name__ == '__main__':
         help='The new name of the python package included in this directory',
         default=None)
 
+    parser.add_argument(
+        '--github_name',
+        type=str,
+        help='The name of the github accont of the python package included in this directory',
+        default=None)
     parser.add_argument(
         '--author_name',
         type=str,
@@ -220,7 +240,10 @@ if __name__ == '__main__':
                         help='Whether to enable or disable the coverage '
                              'reports for this repository')
 
-    parser_args = parser.parse_args()
+    return parser.parse_args()
+
+def main():
+    parser_args = parse_args()
 
     returns, successes = {}, {}
     functions = OrderedDict()
@@ -235,6 +258,12 @@ if __name__ == '__main__':
     else:
         package_name_fn = partial(set_package_name,
                                   name=parser_args.package_name)
+
+    if parser_args.github_name is None:
+        github_name_fn = successfull
+    else:
+        github_name_fn = partial(set_github_name,
+                                 name=parser_args.github_name)
 
     if parser_args.author_name is None:
         author_name_fn = successfull
@@ -276,3 +305,11 @@ if __name__ == '__main__':
 
         returns[name] = ret_val
         successes[name] = success
+
+
+if __name__ == '__main__':
+    from functools import partial
+    import argparse
+    from collections import OrderedDict
+
+    main()
