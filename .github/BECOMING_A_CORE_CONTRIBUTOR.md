@@ -7,7 +7,7 @@ As a core maintainer you will have a strong say in the direction of the project.
 
 ### Code of conduct
 
-First and foremost, you'll be evaluated against [these core values](https://github.com/AUTHOR_NAME/REPONAME/blob/master/.github/CONTRIBUTING.md). Any code we commit or feature we add needs to align with those core values.
+First and foremost, you'll be evaluated against [these core values](https://github.com/GITHUB_NAME/REPONAME/blob/master/.github/CONTRIBUTING.md). Any code we commit or feature we add needs to align with those core values.
 
 ### The bar for joining the team
 

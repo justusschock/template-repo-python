@@ -86,7 +86,7 @@ _**Note**, even if you do not find the solution, sending a PR with a test coveri
 
 1. Add/update the relevant tests!
 
-- [This PR](https://github.com/AUTHORNAME/PACKAGE_NAME/pull/2671) is a good example for adding a new metric, and [this one for a new logger](https://github.com/AUTHOR_NAME/PACKAGE_NAME/pull/2721)
+- [This PR](https://github.com/AUTHORNAME/PACKAGE_NAME/pull/2671) is a good example for adding a new metric, and [this one for a new logger](https://github.com/GITHUB_NAME/REPONAME/pull/2721)
 
 ### Test cases:
 
@@ -219,7 +219,7 @@ We welcome any useful contribution! For your convenience here's a recommended wo
 
 1. **How can I help/contribute?**
 
-   All help is extremely welcome - reporting bugs, fixing documentation, adding test cases, solving issues and preparing bug fixes. To solve some issues you can start with label [good first issue](https://github.com/AUTHOR_NAME/PACKAGE_NAME/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) or chose something close to your domain with label [help wanted](https://github.com/AUTHOR_NAME/PACKAGE_NAME/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22). Before you start to implement anything check that the issue description that it is clear and self-assign the task to you (if it is not possible, just comment that you take it and we assign it to you...).
+   All help is extremely welcome - reporting bugs, fixing documentation, adding test cases, solving issues and preparing bug fixes. To solve some issues you can start with label [good first issue](https://github.com/GITHUB_NAME/REPONAME/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) or chose something close to your domain with label [help wanted](https://github.com/GITHUB_NAME/REPONAME/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22). Before you start to implement anything check that the issue description that it is clear and self-assign the task to you (if it is not possible, just comment that you take it and we assign it to you...).
 
 2. **Is there a recommendation for branch names?**
 
@@ -232,7 +232,7 @@ We welcome any useful contribution! For your convenience here's a recommended wo
    First, make sure you have set [upstream](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork) by running:
 
    ```bash
-   git remote add upstream https://github.com/AUTHOR_NAME/PACKAGE_NAME.git
+   git remote add upstream https://github.com/GITHUB_NAME/REPONAME.git
    ```
 
    You'll know its set up right if you run `git remote -v` and see something similar to this:
@@ -240,8 +240,8 @@ We welcome any useful contribution! For your convenience here's a recommended wo
    ```bash
    origin  https://github.com/{YOUR_USERNAME}/PACKAGE_NAME.git (fetch)
    origin  https://github.com/{YOUR_USERNAME}/PACKAGE_NAME.git (push)
-   upstream        https://github.com/AUTHOR_NAME/PACKAGE_NAME.git (fetch)
-   upstream        https://github.com/AUTHOR_NAME/PACKAGE_NAME.git (push)
+   upstream        https://github.com/GITHUB_NAME/REPONAME.git (fetch)
+   upstream        https://github.com/GITHUB_NAME/REPONAME.git (push)
    ```
 
    Now you can update your master with upstream's master by running:
@@ -280,7 +280,7 @@ NOTE: Once you edit one of these files, remember to `source` it or restart your 
 plclone (){
    git clone https://github.com/{YOUR_USERNAME}/REPONAME.git
    cd REPONAME
-   git remote add upstream https://github.com/AUTHOR_NAME/REPONAME.git
+   git remote add upstream https://github.com/GITHUB_NAME/REPONAME.git
    # This is just here to print out info about your remote upstream/origin
    git remote -v
 }
