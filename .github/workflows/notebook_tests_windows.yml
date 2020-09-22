@@ -1,4 +1,4 @@
-name: NotebookTests Windows
+name: "NotebookTests Windows"
 
 on: [push]
 
@@ -28,6 +28,6 @@ jobs:
         pip install -r requirements/notebooks.txt;
         pip install --no-deps .
 
-    - name: Run Notebooks
-      run: |
-        treon --threads=1  # Treon on windows fails with multiple threads
+    # - name: Run Notebooks
+    #   run: |
+    #     treon --threads=1  # Treon on windows fails with multiple threads

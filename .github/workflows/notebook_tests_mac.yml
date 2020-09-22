@@ -1,4 +1,4 @@
-name: NotebookTests MacOS
+name: "NotebookTests MacOS"
 
 on: [push]
 
@@ -28,6 +28,6 @@ jobs:
         pip install -r requirements/notebooks.txt;
         pip install --no-deps .
 
-    - name: Run Notebooks
-      run: |
-        treon --threads=1 # with more threads this requires to much RAM
+    # - name: Run Notebooks
+    #   run: |
+    #     treon --threads=1 # with more threads this requires to much RAM
