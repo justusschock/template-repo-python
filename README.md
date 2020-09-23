@@ -30,10 +30,9 @@
 [![codecov](https://codecov.io/gh/AUTHOR_NAME/PACKAGE_NAME/branch/master/graph/badge.svg)](https://codecov.io/gh/AUTHOR_NAME/PACKAGE_NAME)
 [![Coverage](https://img.shields.io/codecov/c/github/AUTHOR_NAME/PACKAGE_NAME)](https://codecov.io/gh/AUTHOR_NAME/PACKAGE_NAME)
 
-[![Python 3.6 passed](https://img.shields.io/github/workflow/status/AUTHOR_NAME/PACKAGE_NAME/python-3.6?label=python%203.6)](https://github.com/FlorianMF/template-repo-python/actions)
-[![Python 3.7 passed](https://img.shields.io/github/workflow/status/AUTHOR_NAME/PACKAGE_NAME/python-3.7?label=python%203.7)](https://github.com/FlorianMF/template-repo-python/actions)
-[![Status](https://img.shields.io/pypi/status/PACKAGE_NAME)](https://pypi.org/project/template-repo-python)
 
+[![Status](https://img.shields.io/pypi/status/PACKAGE_NAME)](https://pypi.org/project/template-repo-python)
+![Docs](https://github.com/FlorianMF/template-repo-python/workflows/Docs%20Check/badge.svg)
 [![ReadTheDocs](https://readthedocs.org/projects/PACKAGE_NAME/badge/?version=stable)](https://PACKAGE_NAME.readthedocs.io/en/stable/)
 [![Slack](https://img.shields.io/badge/slack-chat-green.svg?logo=slack)](https://join.slack.com/t/PACKAGE_NAME/shared_invite/zt-f6bl2l0l-JYMK3tbAgAmGRrlNr00f1A)
 [![Discourse status](https://img.shields.io/discourse/status?server=https%3A%2F%2Fforums.AUTHOR_NAME.ai)](https://forums.AUTHOR_NAME.ai/)
@@ -46,15 +45,14 @@
 
 [![Version tag](https://img.shields.io/github/v/tag/AUTHOR_NAME/PACKAGE_NAME)](https://github.com/FlorianMF/template-repo-python/releases)
 
-
-| Python Version                                                 | Platform                                             | Unittests                                                                                         | NotebookTests                                                                            |
-|----------------------------------------------------------------|------------------------------------------------------|---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| ![Python](https://img.shields.io/badge/python-3.6/3.7/3.8-orange) | ![System](https://img.shields.io/badge/Linux-blue)   | ![Unittests Linux](https://github.com/FlorianMF/template-repo-python/workflows/Unittests%20Linux/badge.svg)     | ![NotebookTests Linux](https://github.com/FlorianMF/template-repo-python/workflows/NotebookTests%20Linux/badge.svg) |
+| Python Version | Platform | Unittests | NotebookTests |
+---              | ---      |  ---      | ---           |
+| ![Python](https://img.shields.io/badge/python-3.6/3.7/3.8-orange) | ![System](https://img.shields.io/badge/Linux-blue) | ![Unittests Linux](https://github.com/FlorianMF/template-repo-python/workflows/Unittests%20Linux/badge.svg) | ![NotebookTests Linux](https://github.com/FlorianMF/template-repo-python/workflows/NotebookTests%20Linux/badge.svg) |
 | ![Python](https://img.shields.io/badge/python-3.6/3.7/3.8-orange) | ![System](https://img.shields.io/badge/Windows-blue) | ![Unittests Windows](https://github.com/FlorianMF/template-repo-python/workflows/Unittests%20Windows/badge.svg) | ![NotebookTests Windows](https://github.com/FlorianMF/template-repo-python/workflows/NotebookTests%20Windows/badge.svg) |
 | ![Python](https://img.shields.io/badge/python-3.6/3.7/3.8-orange) | ![System](https://img.shields.io/badge/MacOS-blue)   | ![Unittests macOS](https://github.com/FlorianMF/template-repo-python/workflows/Unittests%20MacOS/badge.svg)    | ![NotebookTests MacOS](https://github.com/FlorianMF/template-repo-python/workflows/NotebookTests%20MacOS/badge.svg) |
 
 
-**For more badges check <https://github.com/badges/shields>**
+**For more badges check <https://github.com/badges/shields>. You can as well copy the badge code directly from the actions tab in your GitHub repo.**
 
 </div>
 
