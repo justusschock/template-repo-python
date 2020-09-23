@@ -6,7 +6,7 @@ pypandoc
 docutils
 sphinxcontrib-fulltoc
 sphinxcontrib-mockautodoc
-git+https://github.com/FlorianFM/rising_sphinx_theme.git
+git+https://github.com/FlorianFM/sphinx_theme.git
 sphinx-autodoc-typehints
 sphinx-paramlinks<0.4.0
 jupyter
