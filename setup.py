@@ -113,7 +113,7 @@ setup(
     setup_requires=[],
     install_requires=requirements,   # Optional
     extras_require=extras,
-    python_requires='>=3.7*',
+    python_requires='>=3.6*',
 
     test_suite='setup.get_test_suite',
     tests_require=["coverage"],
