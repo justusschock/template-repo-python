@@ -13,16 +13,16 @@ jobs:
         uses: actions/checkout@master
 
       - name: autopep8
-        uses: peter-evans/autopep8@v1.0.0
+        uses: peter-evans/autopep8@v4
         with:
           args: --recursive --in-place --aggressive --aggressive .
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v2.0.0
         with:
-          commit_user_name: Florian Müller-Fouarge
-          commit_user_email: florian.mueller.fouarge@gmail.com
           # Required
           commit_message: autopep8 fix
+          commit_user_name: Florian Müller-Fouarge
+          commit_user_email: florian.mueller.fouarge@gmail.com
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
