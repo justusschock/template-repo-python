@@ -1,18 +1,15 @@
-name: "Docs Check on Pull Request"
+name: "Docs Check"
 # https://github.com/marketplace/actions/sphinx-build
 
 on:
   pull_request:
-    branches-ignore:
-        - '**'
-    # branches:
-      # - master
+    branches: [master]
 
 jobs:
   check-docs:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - uses: ammaraskar/sphinx-action@master
       with:
         # git is required to clone the docs theme
@@ -28,7 +25,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.7
+          python-version: 3.8
 
       # Note: This uses an internal pip API and may not always work
       # https://github.com/actions/cache/blob/master/examples.md#multiple-oss-in-a-workflow
@@ -43,8 +40,8 @@ jobs:
       - name: Install dependencies
         run: |
           # python -m pip install --upgrade --user pip
-          pip install --requirement requirements/install.txt --upgrade-strategy only-if-needed --find-links https://download.pytorch.org/whl/cpu/torch_stable.html --quiet
-          pip install --requirement requirements/extra.txt
+          pip install --requirement requirements/install.txt --upgrade-strategy only-if-needed
+          # pip install --requirement requirements/extra.txt
           pip install --requirement requirements/docs.txt
           python --version ; pip --version ; pip list
         shell: bash
@@ -60,13 +57,13 @@ jobs:
           make coverage
 
   make-docs:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.7
+          python-version: 3.8
 
       # Note: This uses an internal pip API and may not always work
       # https://github.com/actions/cache/blob/master/examples.md#multiple-oss-in-a-workflow
