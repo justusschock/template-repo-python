@@ -6,20 +6,6 @@ def get_root_path():
     return os.path.dirname(os.path.dirname(__file__))
 
 
-def set_repo_name(name: str):
-    base_path = get_root_path()
-    new_path = os.path.join(os.path.dirname(base_path), name)
-    shutil.move(base_path, new_path)
-
-    files = ['setup.cfg'
-             ]
-
-    for file in files:
-        replace_file_content(os.path.join(base_path, file), 'REPO_NAME', name)
-
-    return new_path
-
-
 def read_file(file: str):
     with open(file) as f:
         content = f.readlines()
@@ -67,50 +53,81 @@ def remove_lines_with_starting_string(file: str, start_str: str):
         f.writelines(new_content)
 
 
+def set_repo_name(name: str):
+    base_path = get_root_path()
+    new_path = os.path.join(os.path.dirname(base_path), name)
+    shutil.move(base_path, new_path)
+
+    files = [
+        '.codecov.yml',
+        '.gitattributes',
+        '.MANIFEST.in',
+        '.README.md',
+        'setup.cfg',
+        'setup.py',
+        os.path.join('.github', 'BECOMING_A_CORE_CONTRIBUTOR.md'),
+        os.path.join('.github', 'CONTRIBUTING.md'),
+        os.path.join('.github', 'PULL_REQUEST_TEMPLATE.md'),
+        os.path.join('.github', 'workflows', 'ci_testing.yml'),
+        os.path.join('.github', 'workflows', 'unittests_linux.yml'),
+        os.path.join('.github', 'workflows', 'unittests_windows.yml'),
+        os.path.join('.github', 'workflows', 'unittests_mac.yml'),
+        os.path.join(name, '__init__.py'),
+        os.path.join(name, '_version.py'),
+        ]
+
+    for filename in files:
+        replace_file_content(os.path.join(base_path, filename),
+                             'REPO_NAME', name)
+
+    return new_path
+
+
 def set_package_name(name: str):
-    files = ['setup.cfg',
-             'setup.py',
-             '.gitattributes',
-             'MANIFEST.in',
-             os.path.join('.github', 'workflows', 'unittests.yml')
-             ]
+    files = [
+        '.README.md',
+        'setup.py',
+        os.path.join('.circleci', 'config.yml'),
+        os.path.join('.github', 'BECOMING_A_CORE_CONTRIBUTOR.md'),
+        os.path.join('.github', 'CONTRIBUTING.md'),
+        os.path.join('.github','ISSUE_TEMPLATE', 'bug_report.md'),
+        ]
 
     base_path = get_root_path()
 
     for file in files:
         replace_file_content(os.path.join(base_path, file), 'PACKAGE_NAME', name)
 
-    shutil.move(os.path.join(base_path, 'PACKAGE_NAME'),
-                os.path.join(base_path, name))
-
 
 def set_github_name(name: str):
-    files = ['setup.py',
-             '.readthedocs.yml',
-             'LICENSE',
-             '.mergify.yml'
-             ]
+    files = [
+        '.README.md',
+        'setup.py',
+        os.path.join('.github', 'BECOMING_A_CORE_CONTRIBUTOR.md'),
+        os.path.join('.github', 'CONTRIBUTING.md'),
+        os.path.join('.github', 'PULL_REQUEST_TEMPLATE.md'),
+        ]
 
     base_path = get_root_path()
 
-    for file in files:
+    for filename in files:
         replace_file_content(
-            os.path.join(
-                base_path,
-                file),
+            os.path.join(base_path, filename),
             'GITHUB_NAME',
             name)
 
-    shutil.move(os.path.join(base_path, 'GITHUB_NAME'),
-                os.path.join(base_path, name))
-
 
 def set_author_name(name: str):
-    files = ['setup.py',
-             '.readthedocs.yml',
-             'LICENSE',
-             '.mergify.yml'
-             ]
+    files = [
+        '.mergify.yml',
+        '.pre-commit-config.yml',
+        '.readthedocs.yml',
+        'LICENSE',
+        '.README.md',
+        'setup.cfg',
+        'setup.py',
+        os.path.join('.github', 'CONTRIBUTING.md'),
+        ]
 
     base_path = get_root_path()
 
@@ -122,12 +139,12 @@ def set_author_name(name: str):
             'AUTHOR_NAME',
             name)
 
-    shutil.move(os.path.join(base_path, 'AUTHOR_NAME'),
-                os.path.join(base_path, name))
-
 
 def set_author_email(name: str):
-    files = ['setup.py']
+    files = [
+        '.README.md',
+        'setup.py',
+        ]
 
     base_path = get_root_path()
 
@@ -139,12 +156,11 @@ def set_author_email(name: str):
             'AUTHOR_EMAIL',
             name)
 
-    shutil.move(os.path.join(base_path, 'AUTHOR_EMAIL'),
-                os.path.join(base_path, name))
-
 
 def set_maintainer_name(name: str):
-    files = ['setup.py']
+    files = [
+        'setup.py',
+        ]
 
     base_path = get_root_path()
 
@@ -156,12 +172,11 @@ def set_maintainer_name(name: str):
             'MAINTAINER_NAME',
             name)
 
-    shutil.move(os.path.join(base_path, 'MAINTAINER_NAME'),
-                os.path.join(base_path, name))
-
 
 def set_maintainer_email(name: str):
-    files = ['setup.py']
+    files = [
+        'setup.py',
+        ]
 
     base_path = get_root_path()
 
@@ -173,19 +188,17 @@ def set_maintainer_email(name: str):
             'MAINTAINER_EMAIL',
             name)
 
-    shutil.move(os.path.join(base_path, 'MAINTAINER_EMAIL'),
-                os.path.join(base_path, name))
-
 
 def configure_coverage_upload(enable: bool):
-    file = os.path.join(get_root_path(),
-                        '.github', 'workflows', 'unittests.yml')
+    base_path = get_root_path()
+    filename = os.path.join(base_path,
+                        '.github', 'workflows', 'unittests_linux.yml')
     start_str = '#COVERAGE_UPLOAD_CONFIG'
 
     if enable:
-        remove_starting_string(file, start_str=start_str)
+        remove_starting_string(filename, start_str=start_str)
     else:
-        remove_lines_with_starting_string(file, start_str=start_str)
+        remove_lines_with_starting_string(filename, start_str=start_str)
 
 
 def exec_fn_with_exception_guard(fn, *args, **kwargs):
@@ -244,13 +257,10 @@ def parse_args():
 
     return parser.parse_args()
 
-
-def main():
-    parser_args = parse_args()
-
-    returns, successes = {}, {}
+def get_functions(parser_args):
     functions = OrderedDict()
-
+    # For each argument, if its True, set the corresponding function,
+    # else use the successfull function to simply return True
     if parser_args.repo_name is None:
         repo_name_fn = successfull
     else:
@@ -303,6 +313,18 @@ def main():
     functions['maintainer_name'] = maintainer_name_fn
     functions['maintainer_email'] = maintainer_email_fn
 
+    return functions
+
+def main():
+    # Get the CLI arguments
+    parser_args = parse_args()
+
+    returns, successes = {}, {}
+    # Get the functions to execute
+    functions = get_functions(parser_args)
+
+    # Execute the functions and
+    # add the return values and the success bool to dicts
     for name, func in functions.items():
         success, ret_val = exec_fn_with_exception_guard(func)
 
