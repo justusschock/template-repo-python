@@ -17,6 +17,7 @@ on:
 
 jobs:
   pytest:
+    if: false # always skip job
 
     runs-on: ${{ matrix.os }}
     strategy:
